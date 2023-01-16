@@ -1,0 +1,64 @@
+#chart-area {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+.d3-tip {
+	background-color: black;
+	color: aliceblue;
+}
+
+#chart-area-coin svg, #chart-area-coin-brush svg{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+ }
+ 
+ 
+ 
+ #coin-chart .axis {
+	font: 10px sans-serif;
+ }
+ 
+ #coin-chart .axis path,#coin-chart .axis line {
+	fill: none;
+	stroke: #D4D8DA;
+	stroke-width: 2px;
+	shape-rendering: crispEdges;
+ }
+ 
+ #coin-chart .line {
+	fill: none;
+	stroke-width: 2px;
+ }
+ 
+ #coin-chart .overlay {
+	fill: none;
+	pointer-events: all;
+ }
+ 
+ #coin-chart .focus circle {
+	fill: #F1F3F3;
+	stroke: #777;
+	stroke-width: 3px;
+ }
+	
+ #coin-chart .hover-line {
+	stroke: #777;
+	stroke-width: 2px;
+	stroke-dasharray: 3,3;
+ }
+ 
+ #coin-chart #selections .col-md-4 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+ }
+ 
+ #coin-chart .line {
+	fill: none;
+	stroke-width: 3px;
+	stroke: grey;
+ }
+ 

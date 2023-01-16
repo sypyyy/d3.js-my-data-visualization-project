@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<title>Projects - d3.js</title>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!-- Custom styling -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+
+	<!-- Bootstrap grid setup -->
+	<div id = "GDPChart">
+		
+		<div class="container mt-3" style="max-width : 600px">
+			<div class="text-center">
+				<h1>1. GDP and Life Expectancy of Different Countries 
+				</h1>
+				<div class="text-start mb-5">
+					Below is a bubble chart indicating GDP, life expectancy, and population of different countries from 1800 to 2014.
+					<br/>
+					Each circle represents a country, and the size of the circle represents the country's population.
+					<br/>
+					Use the slider to switch to the year you are interested in. You can also hover your mouse over a circle to see information regarding 
+					that country.
+					
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<button class="btn btn-primary pause mx-2">Pause</button>
+					<button class="btn btn-danger reset mx-2">Reset</button>
+				</div>
+					
+				<div  class="col">
+					<input max="214" style="width:300px" type="range" class="form-range yearRangeInput" id="customRange1">
+					<div class="mb-0 year">Year:</div>
+				</div>
+			</div>
+			
+			<div class="row mt-3">
+				<div id="chart-area"></div>  
+			</div>
+		</div>
+	</div>
+	<div class="container" id="coin-chart">
+		<div class="text-center mx-auto mb-3" style = "width : 600px">
+			<h1>2. Prices of Different Types of Virtual Coins 
+			</h1>
+			<div class="text-start mb-5">
+				Below is a line chart indicating prices of different kind of virtual coins.
+				<br/>
+				Move and resize the brush to choose a time period you are interested in. Use the selector to switch coin type and statistic type.
+				<br/>
+				You can also hover over the chart to see the exact value of a certain time.
+				
+			</div>
+		</div>
+		<div id="selections" class="row mx-auto" style="width : 800px">
+			<div class="col-md-4 col-sm-12">
+				<div id="slider-div">
+					<label>Date: <span id="dateLabel1">12/05/2013</span> - <span id="dateLabel2">31/10/2017</span></label>
+					<div id="date-slider"></div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<select id="coin-select" class="form-control">
+					<option selected value="bitcoin">Bitcoin</option>
+					<option value="ethereum">Ethereum</option>
+					<option value="bitcoin_cash">Bitcoin Cash</option>
+					<option value="litecoin">Litecoin</option>
+					<option value="ripple">Ripple</option>
+				</select>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<select id="var-select" class="form-control">
+					<option selected value="price_usd">Price in dollars</option>
+					<option value="market_cap">Market capitalization</option>
+					<option value="24h_vol">24 hour trading volume</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="chart-area-coin"></div>  
+				<div id="chart-area-coin-brush"></div>                
+			</div>
+		</div>
+		<div class="row pb-5">
+		</div>
+		
+	</div>
+	
+	<!-- External JS libraries -->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<!-- Custom JS -->
+	<script src="js/d3-tip.js"></script>
+	<script src="js/main1.js"></script>
+	<script src="js/main2.js"></script>
+
+</body>
+</html>
